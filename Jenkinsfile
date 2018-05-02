@@ -19,7 +19,7 @@ pipeline {
       steps {
         echo 'I am stage'
         retry(count: 3) {
-          input(message: 'Do you want to proceed?', id: '1', ok: 'yes', submitter: 'bp', submitterParameter: 'b')
+          input(message: 'Do you want to proceed?', id: '1', ok: 'yes', submitter: 'bpant', submitterParameter: 'b')
         }
 
       }
