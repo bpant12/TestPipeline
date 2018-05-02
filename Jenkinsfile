@@ -2,8 +2,17 @@ pipeline {
   agent any
   stages {
     stage('qe') {
-      steps {
-        echo 'I am QE'
+      parallel {
+        stage('qe') {
+          steps {
+            echo 'I am QE'
+          }
+        }
+        stage('qe1') {
+          steps {
+            echo 'QE1 message'
+          }
+        }
       }
     }
     stage('Stage') {
